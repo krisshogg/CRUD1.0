@@ -1,6 +1,6 @@
 package web.controller;
 
-import jakarta.validation.Valid;
+//import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +38,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+    public String create(@ModelAttribute("user") User user, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "new";
@@ -55,7 +55,7 @@ public class UserController {
     }
 
     @PostMapping("/{id}")
-    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult, @PathVariable("id") int id) {
+    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, @PathVariable("id") int id) {
 
         if (bindingResult.hasErrors()) {
             return "edit";

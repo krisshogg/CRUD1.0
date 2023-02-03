@@ -25,26 +25,6 @@
 
 
     <dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-      <version>2.3.0</version>
-    </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
-    <dependency>
-      <groupId>org.hibernate.validator</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>6.0.17.Final</version>
-    </dependency>
-
-    <dependency>
-      <groupId>jakarta.validation</groupId>
-      <artifactId>jakarta.validation-api</artifactId>
-      <version>3.0.2</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
@@ -82,14 +62,8 @@
 
     <dependency>
       <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>4.1.4.Final</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>5.0.6.Final</version>
+      <version>5.6.5.Final</version>
     </dependency>
 
     <dependency>
@@ -99,12 +73,6 @@
     </dependency>
 
 
-<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa &ndash;&gt;
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-jpa</artifactId>
-      <version>3.0.1</version>
-    </dependency>-->
 
   </dependencies>
 
