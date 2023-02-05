@@ -1,6 +1,7 @@
 package web.controller;
 
 //import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +26,7 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping( "/{id}")
+    @GetMapping("/{id}")
     public String show(@PathVariable("id") int id, Model model) {
 
         model.addAttribute("user", userService.show(id));
@@ -66,7 +67,7 @@ public class UserController {
     }
 
     @DeleteMapping("{id}")
-    public String delete(@PathVariable("id") int id){
+    public String delete(@PathVariable("id") int id) {
         userService.delete(id);
         return "redirect:/";
     }

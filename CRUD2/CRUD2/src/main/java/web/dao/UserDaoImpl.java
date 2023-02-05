@@ -15,35 +15,34 @@ public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
     private EntityManager em;
+
     @Override
-    public List<User> index(){
+    public List<User> index() {
 
         return em.createQuery("from User", User.class).getResultList();
     }
 
     @Override
-    @Transactional
-    public User show(int id){
+    public User show(int id) {
 
         return em.find(User.class, id);
     }
 
     @Override
-    @Transactional
     public void save(User user) {
         em.persist(user);
         em.close();
     }
 
     @Override
-    @Transactional
     public void update(int id, User updateUser) {
         em.merge(updateUser);
     }
 
     @Override
     public void delete(int id) throws NullPointerException {
-        User user = em.find(User.class, id);;
+        User user = em.find(User.class, id);
+        ;
         if (null == user) {
             throw new NullPointerException("User not found");
         }
